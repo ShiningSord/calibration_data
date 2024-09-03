@@ -1,0 +1,1020 @@
+model: /mntnlp/common_base_model/llama2-7b-chat
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 128
+sparsity sanity check 0.5000, ppl: 8.370991706848145
+
+model: /mntnlp/common_base_model/llama2-7b-chat
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 128
+sparsity sanity check 0.3999, ppl: 7.589131832122803
+
+model: /mntnlp/common_base_model/llama2-7b-chat
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 128
+sparsity sanity check 0.2998, ppl: 7.16623067855835
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 128
+sparsity sanity check 0.5000, ppl: 9.189047813415527
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 128
+sparsity sanity check 0.5000, ppl: 9.189047813415527
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 128
+sparsity sanity check 0.5000, ppl: 10.636175155639648
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 128
+sparsity sanity check 0.5000, ppl: 13.579872131347656
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 128
+sparsity sanity check 0.5000, ppl: 13.909979820251465
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.843561172485352
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.637133598327637
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 14.307342529296875
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 14.307342529296875
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 128
+sparsity sanity check 0.5000, ppl: 14.267684936523438
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 128
+sparsity sanity check 0.5000, ppl: 28.740699768066406
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: dense
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 128
+sparsity sanity check 0.0000, ppl: 8.284417152404785
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 128
+sparsity sanity check 0.5000, ppl: 11.881292343139648
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 27.900279998779297
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 16.974763870239258
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 16.974763870239258
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 37.71140670776367
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.143943786621094
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.389938354492188
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.324308395385742
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.442256927490234
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 128
+sparsity sanity check 0.5000, ppl: 20.31961441040039
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.143943786621094
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 17.018020629882812
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 16.98892593383789
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.389938354492188
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.324308395385742
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 20.348873138427734
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.799983978271484
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.799983978271484
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.799983978271484
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.799983978271484
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 14.894288063049316
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 18.656269073486328
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.591567993164062
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.591567993164062
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.652743339538574
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.70667839050293
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.64339828491211
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.64339828491211
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.652743339538574
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.70667839050293
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5999, ppl: 13.088387489318848
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5999, ppl: 13.217888832092285
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.6999, ppl: 45.669761657714844
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.6999, ppl: 46.185272216796875
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.591567993164062
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.64339828491211
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.652743339538574
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.681646347045898
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5999, ppl: 13.217888832092285
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5999, ppl: 13.147555351257324
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5999, ppl: 13.254024505615234
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5999, ppl: 13.088387489318848
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 11.9888334274292
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.748038291931152
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.563652038574219
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.542170524597168
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.625496864318848
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 12.7612886428833
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 12.724767684936523
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 2:4
+sample: 1024
+sparsity sanity check 0.5000, ppl: 12.780450820922852
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.210634231567383
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.201878547668457
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.214110374450684
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.238300323486328
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.246072769165039
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.26556396484375
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.181792259216309
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.184406280517578
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: unstructured
+sample: 1024
+sparsity sanity check 0.5000, ppl: 9.172098159790039
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 17.481290817260742
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 17.419734954833984
+
+model: /ossfs/workspace/common_base_model/Meta-Llama-3-8B-Instruct
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 17.514055252075195
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.75910472869873
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.739466667175293
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.636835098266602
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.848451614379883
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.806217193603516
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.799983978271484
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 13.848451614379883
+
+model: /ossfs/workspace/datacube-nas/yixin_llm/Meta-Llama-3-8B
+prune_method: DSnoT
+without_DSnoT: False
+initial_method: wanda
+skip_layer mlp, skip_sub_layer no_skip
+max_cycle_time: 50, update_threshold: 0.1
+pow_of_var_pruning: 1, pow_of_var_regrowing:1.0
+without_same_sign: True
+sparse pattern: 4:8
+sample: 1024
+sparsity sanity check 0.5000, ppl: 14.106935501098633
+
