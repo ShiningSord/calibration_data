@@ -1,0 +1,281 @@
+torch 2.4.0
+transformers 4.44.2
+accelerate 0.33.0
+# of gpus:  1
+loading llm model /ossfs/workspace/datacube-nas/yixin_llm/DCLM-7B
+use device  cuda:0
+pruning starts
+loading calibdation data
+dataset loading complete
+pruning layer 0 name attention.q_proj
+pruning layer 0 name attention.k_proj
+pruning layer 0 name attention.v_proj
+pruning layer 0 name attention.out_proj
+pruning layer 0 name feed_forward.w1
+pruning layer 0 name feed_forward.w2
+pruning layer 0 name feed_forward.w3
+pruning layer 1 name attention.q_proj
+pruning layer 1 name attention.k_proj
+pruning layer 1 name attention.v_proj
+pruning layer 1 name attention.out_proj
+pruning layer 1 name feed_forward.w1
+pruning layer 1 name feed_forward.w2
+pruning layer 1 name feed_forward.w3
+pruning layer 2 name attention.q_proj
+pruning layer 2 name attention.k_proj
+pruning layer 2 name attention.v_proj
+pruning layer 2 name attention.out_proj
+pruning layer 2 name feed_forward.w1
+pruning layer 2 name feed_forward.w2
+pruning layer 2 name feed_forward.w3
+pruning layer 3 name attention.q_proj
+pruning layer 3 name attention.k_proj
+pruning layer 3 name attention.v_proj
+pruning layer 3 name attention.out_proj
+pruning layer 3 name feed_forward.w1
+pruning layer 3 name feed_forward.w2
+pruning layer 3 name feed_forward.w3
+pruning layer 4 name attention.q_proj
+pruning layer 4 name attention.k_proj
+pruning layer 4 name attention.v_proj
+pruning layer 4 name attention.out_proj
+pruning layer 4 name feed_forward.w1
+pruning layer 4 name feed_forward.w2
+pruning layer 4 name feed_forward.w3
+pruning layer 5 name attention.q_proj
+pruning layer 5 name attention.k_proj
+pruning layer 5 name attention.v_proj
+pruning layer 5 name attention.out_proj
+pruning layer 5 name feed_forward.w1
+pruning layer 5 name feed_forward.w2
+pruning layer 5 name feed_forward.w3
+pruning layer 6 name attention.q_proj
+pruning layer 6 name attention.k_proj
+pruning layer 6 name attention.v_proj
+pruning layer 6 name attention.out_proj
+pruning layer 6 name feed_forward.w1
+pruning layer 6 name feed_forward.w2
+pruning layer 6 name feed_forward.w3
+pruning layer 7 name attention.q_proj
+pruning layer 7 name attention.k_proj
+pruning layer 7 name attention.v_proj
+pruning layer 7 name attention.out_proj
+pruning layer 7 name feed_forward.w1
+pruning layer 7 name feed_forward.w2
+pruning layer 7 name feed_forward.w3
+pruning layer 8 name attention.q_proj
+pruning layer 8 name attention.k_proj
+pruning layer 8 name attention.v_proj
+pruning layer 8 name attention.out_proj
+pruning layer 8 name feed_forward.w1
+pruning layer 8 name feed_forward.w2
+pruning layer 8 name feed_forward.w3
+pruning layer 9 name attention.q_proj
+pruning layer 9 name attention.k_proj
+pruning layer 9 name attention.v_proj
+pruning layer 9 name attention.out_proj
+pruning layer 9 name feed_forward.w1
+pruning layer 9 name feed_forward.w2
+pruning layer 9 name feed_forward.w3
+pruning layer 10 name attention.q_proj
+pruning layer 10 name attention.k_proj
+pruning layer 10 name attention.v_proj
+pruning layer 10 name attention.out_proj
+pruning layer 10 name feed_forward.w1
+pruning layer 10 name feed_forward.w2
+pruning layer 10 name feed_forward.w3
+pruning layer 11 name attention.q_proj
+pruning layer 11 name attention.k_proj
+pruning layer 11 name attention.v_proj
+pruning layer 11 name attention.out_proj
+pruning layer 11 name feed_forward.w1
+pruning layer 11 name feed_forward.w2
+pruning layer 11 name feed_forward.w3
+pruning layer 12 name attention.q_proj
+pruning layer 12 name attention.k_proj
+pruning layer 12 name attention.v_proj
+pruning layer 12 name attention.out_proj
+pruning layer 12 name feed_forward.w1
+pruning layer 12 name feed_forward.w2
+pruning layer 12 name feed_forward.w3
+pruning layer 13 name attention.q_proj
+pruning layer 13 name attention.k_proj
+pruning layer 13 name attention.v_proj
+pruning layer 13 name attention.out_proj
+pruning layer 13 name feed_forward.w1
+pruning layer 13 name feed_forward.w2
+pruning layer 13 name feed_forward.w3
+pruning layer 14 name attention.q_proj
+pruning layer 14 name attention.k_proj
+pruning layer 14 name attention.v_proj
+pruning layer 14 name attention.out_proj
+pruning layer 14 name feed_forward.w1
+pruning layer 14 name feed_forward.w2
+pruning layer 14 name feed_forward.w3
+pruning layer 15 name attention.q_proj
+pruning layer 15 name attention.k_proj
+pruning layer 15 name attention.v_proj
+pruning layer 15 name attention.out_proj
+pruning layer 15 name feed_forward.w1
+pruning layer 15 name feed_forward.w2
+pruning layer 15 name feed_forward.w3
+pruning layer 16 name attention.q_proj
+pruning layer 16 name attention.k_proj
+pruning layer 16 name attention.v_proj
+pruning layer 16 name attention.out_proj
+pruning layer 16 name feed_forward.w1
+pruning layer 16 name feed_forward.w2
+pruning layer 16 name feed_forward.w3
+pruning layer 17 name attention.q_proj
+pruning layer 17 name attention.k_proj
+pruning layer 17 name attention.v_proj
+pruning layer 17 name attention.out_proj
+pruning layer 17 name feed_forward.w1
+pruning layer 17 name feed_forward.w2
+pruning layer 17 name feed_forward.w3
+pruning layer 18 name attention.q_proj
+pruning layer 18 name attention.k_proj
+pruning layer 18 name attention.v_proj
+pruning layer 18 name attention.out_proj
+pruning layer 18 name feed_forward.w1
+pruning layer 18 name feed_forward.w2
+pruning layer 18 name feed_forward.w3
+pruning layer 19 name attention.q_proj
+pruning layer 19 name attention.k_proj
+pruning layer 19 name attention.v_proj
+pruning layer 19 name attention.out_proj
+pruning layer 19 name feed_forward.w1
+pruning layer 19 name feed_forward.w2
+pruning layer 19 name feed_forward.w3
+pruning layer 20 name attention.q_proj
+pruning layer 20 name attention.k_proj
+pruning layer 20 name attention.v_proj
+pruning layer 20 name attention.out_proj
+pruning layer 20 name feed_forward.w1
+pruning layer 20 name feed_forward.w2
+pruning layer 20 name feed_forward.w3
+pruning layer 21 name attention.q_proj
+pruning layer 21 name attention.k_proj
+pruning layer 21 name attention.v_proj
+pruning layer 21 name attention.out_proj
+pruning layer 21 name feed_forward.w1
+pruning layer 21 name feed_forward.w2
+pruning layer 21 name feed_forward.w3
+pruning layer 22 name attention.q_proj
+pruning layer 22 name attention.k_proj
+pruning layer 22 name attention.v_proj
+pruning layer 22 name attention.out_proj
+pruning layer 22 name feed_forward.w1
+pruning layer 22 name feed_forward.w2
+pruning layer 22 name feed_forward.w3
+pruning layer 23 name attention.q_proj
+pruning layer 23 name attention.k_proj
+pruning layer 23 name attention.v_proj
+pruning layer 23 name attention.out_proj
+pruning layer 23 name feed_forward.w1
+pruning layer 23 name feed_forward.w2
+pruning layer 23 name feed_forward.w3
+pruning layer 24 name attention.q_proj
+pruning layer 24 name attention.k_proj
+pruning layer 24 name attention.v_proj
+pruning layer 24 name attention.out_proj
+pruning layer 24 name feed_forward.w1
+pruning layer 24 name feed_forward.w2
+pruning layer 24 name feed_forward.w3
+pruning layer 25 name attention.q_proj
+pruning layer 25 name attention.k_proj
+pruning layer 25 name attention.v_proj
+pruning layer 25 name attention.out_proj
+pruning layer 25 name feed_forward.w1
+pruning layer 25 name feed_forward.w2
+pruning layer 25 name feed_forward.w3
+pruning layer 26 name attention.q_proj
+pruning layer 26 name attention.k_proj
+pruning layer 26 name attention.v_proj
+pruning layer 26 name attention.out_proj
+pruning layer 26 name feed_forward.w1
+pruning layer 26 name feed_forward.w2
+pruning layer 26 name feed_forward.w3
+pruning layer 27 name attention.q_proj
+pruning layer 27 name attention.k_proj
+pruning layer 27 name attention.v_proj
+pruning layer 27 name attention.out_proj
+pruning layer 27 name feed_forward.w1
+pruning layer 27 name feed_forward.w2
+pruning layer 27 name feed_forward.w3
+pruning layer 28 name attention.q_proj
+pruning layer 28 name attention.k_proj
+pruning layer 28 name attention.v_proj
+pruning layer 28 name attention.out_proj
+pruning layer 28 name feed_forward.w1
+pruning layer 28 name feed_forward.w2
+pruning layer 28 name feed_forward.w3
+pruning layer 29 name attention.q_proj
+pruning layer 29 name attention.k_proj
+pruning layer 29 name attention.v_proj
+pruning layer 29 name attention.out_proj
+pruning layer 29 name feed_forward.w1
+pruning layer 29 name feed_forward.w2
+pruning layer 29 name feed_forward.w3
+pruning layer 30 name attention.q_proj
+pruning layer 30 name attention.k_proj
+pruning layer 30 name attention.v_proj
+pruning layer 30 name attention.out_proj
+pruning layer 30 name feed_forward.w1
+pruning layer 30 name feed_forward.w2
+pruning layer 30 name feed_forward.w3
+pruning layer 31 name attention.q_proj
+pruning layer 31 name attention.k_proj
+pruning layer 31 name attention.v_proj
+pruning layer 31 name attention.out_proj
+pruning layer 31 name feed_forward.w1
+pruning layer 31 name feed_forward.w2
+pruning layer 31 name feed_forward.w3
+pruning time:  321.18304467201233
+******************************
+layer 0 sparsity 0.500000
+layer 1 sparsity 0.500000
+layer 2 sparsity 0.500000
+layer 3 sparsity 0.500000
+layer 4 sparsity 0.500000
+layer 5 sparsity 0.500000
+layer 6 sparsity 0.500000
+layer 7 sparsity 0.500000
+layer 8 sparsity 0.500000
+layer 9 sparsity 0.500000
+layer 10 sparsity 0.500000
+layer 11 sparsity 0.500000
+layer 12 sparsity 0.500000
+layer 13 sparsity 0.500000
+layer 14 sparsity 0.500000
+layer 15 sparsity 0.500000
+layer 16 sparsity 0.500000
+layer 17 sparsity 0.500000
+layer 18 sparsity 0.500000
+layer 19 sparsity 0.500000
+layer 20 sparsity 0.500000
+layer 21 sparsity 0.500000
+layer 22 sparsity 0.500000
+layer 23 sparsity 0.500000
+layer 24 sparsity 0.500000
+layer 25 sparsity 0.500000
+layer 26 sparsity 0.500000
+layer 27 sparsity 0.500000
+layer 28 sparsity 0.500000
+layer 29 sparsity 0.500000
+layer 30 sparsity 0.500000
+layer 31 sparsity 0.500000
+sparsity sanity check 0.5000
+******************************
+evaluating on wikitext2
+nsamples 140
+sample 0
+sample 50
+sample 100
+wikitext perplexity 9.196099281311035
+[2024-09-02 14:03:10,515] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.4
+[93m [WARNING] [0m using untested triton version (3.0.0), only 1.0.0 is known to be compatible
