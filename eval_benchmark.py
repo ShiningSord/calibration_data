@@ -28,29 +28,7 @@ def eval_zero_shot(model_name, model, task_list=["boolq","rte","hellaswag","wino
 
     return results
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, help='LLaMA model')
-    parser.add_argument('--dataset', type=str, default='cqa', choices=["cqa", "mmlu", "ifeval"], help='eval ppl on dataset')
-    parser.add_argument('--save_log', type=str, default=None, help='Path to save the pruned model.')
-    args = parser.parse_args()
 
-    model = AutoModelForCausalLM.from_pretrained(args.model)
-
-    tokenizer = AutoTokenizer.from_pretrained(args.model)
-    if args.dataset == 'cqa':
-        task_list = ["boolq", "piqa", "hellaswag","winogrande", "arc_easy","arc_challenge", "openbookqa", "commonsense_qa"]
-    elif args.dataset == 'mmlu':
-        task_list = ["mmlu_flan_n_shot_loglikelihood"]
-    elif args.dataset == 'ifeval':
-        task_list = ["ifeval"]
-    #task_list = ["squadv2"]
-    #task_list = ["ifeval"]
-    #task_list = ["gsm8k_cot_zeroshot"]
-
-    num_shot = 0
-    results = eval_zero_shot(model_name, model, task_list, num_shot)
-    print(results['results'])
 
 
 if __name__ == "__main__":
