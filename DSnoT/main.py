@@ -9,6 +9,7 @@ from lib.prune import check_sparsity, prune_DSnoT
 from lib.prune_opt import check_sparsity_opt, prune_DSnoT_opt
 from lib.eval import eval_ppl
 from lib.save_results import save_ppl_result
+import json
 
 print('torch', version('torch'))
 print('transformers', version('transformers'))
@@ -26,6 +27,31 @@ def get_llm(model, cache_dir="llm_weights"):
 
     model.seqlen = 2048
     return model
+
+
+def eval_zero_shot(model_name, model, task_list=["boolq","rte","hellaswag","winogrande","arc_challenge","arc_easy","openbookqa"], 
+        num_fewshot=0, use_accelerate=False, add_special_tokens=False):
+    from lm_eval import evaluator 
+    
+    task_names = task_list
+    model_args = f"pretrained={model_name}"
+    limit = None 
+    if "70b" in model_name or "65b" in model_name:
+        limit = 2000
+    
+    results = evaluator.simple_evaluate(
+        model="hf",
+        model_args=model_args,
+        tasks=task_names,
+        num_fewshot=num_fewshot,
+        batch_size=32,
+        device='cuda',
+        limit=limit,
+        pretrained_model=model
+    )
+
+    return results
+
     
 def main():
     parser = argparse.ArgumentParser()
@@ -38,7 +64,7 @@ def main():
     parser.add_argument("--sparsity_type", type=str, choices=["unstructured", "4:8", "2:4", "8:16","16:32"])
     parser.add_argument("--prune_method", type=str, choices=["wanda", "sparsegpt", "magnitude", "DSnoT", "dense"])
     parser.add_argument("--initial_method", type=str, choices=["wanda", "sparsegpt", "magnitude"])
-
+    parser.add_argument('--data', type=str, default='c4', help='calibration data')
     parser.add_argument('--max_cycle_time', type=int, default=50, help='Max cycle time.')
     parser.add_argument('--without_DSnoT', action="store_true", help="without DSnoT")
     parser.add_argument('--update_threshold', type=float, default=0.1, help='update threshold.')
@@ -49,7 +75,7 @@ def main():
     parser.add_argument('--without_same_sign', type=str, default="True", choices=["True", "False"], help="without same sign")
     
     parser.add_argument('--get_time_overhead', action="store_true", help="get time overhead")
-    
+    parser.add_argument('--eval_benchmark', action="store_true", help="evaluation")
     parser.add_argument("--output_results_file", default="results.txt", type=str)
     parser.add_argument("--cache_dir", default="llm_weights", type=str )
     parser.add_argument('--save_model', type=str, default=None, help='Path to save the pruned model.')
@@ -119,6 +145,18 @@ def main():
     if args.save_model:
         model.save_pretrained(args.save_model)
         tokenizer.save_pretrained(args.save_model)
+
+    if args.eval_benchmark:
+        task_list = ["boolq", "piqa", "hellaswag","winogrande", "arc_easy","arc_challenge","mmlu_flan_n_shot_loglikelihood"]
+        num_shot = 0
+        results = eval_zero_shot(args.model, model, task_list, num_shot)
+        print(results['results'])
+
+        save_filepath = os.path.join('/ossfs/workspace/DSnoT/eval_result', f"log_lm_eval_{model_name}_{args.data}.json")
+        results_json = json.dumps(results['results'], indent=4)
+        with open(save_filepath, "a+") as file:
+            file.write(results_json)
+        print(f"Results saved to {save_filepath}")
 
 if __name__ == '__main__':
     main()
