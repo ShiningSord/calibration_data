@@ -69,10 +69,177 @@ def get_wikitext2(nsamples, seed, seqlen, tokenizer):
     return trainloader, testenc
 
 
+def get_dclm(nsamples, seed, seqlen, tokenizer):
+    # Load train and validation datasets
+    #traindata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_train')
+    #valdata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_validation')
+    dataset = load_dataset('parquet',data_files='/ossfs/workspace/yixin.jyx/data/dclm-micro/output_1.parquet')
+    traindata = dataset['train']#.select(range(10000))
+    valdata = dataset['train'].select(range(300, 600))
+    trainenc = tokenizer(' '.join(traindata['text']), return_tensors='pt')
+
+    # Generate samples from training set
+    random.seed(seed)
+    trainloader = []
+    for _ in range(nsamples):
+        '''
+        while True:
+            i = random.randint(0, len(traindata) - 1)
+            trainenc = tokenizer(traindata[i]['text'], return_tensors='pt')
+            if trainenc.input_ids.shape[1] > seqlen:
+                break
+        '''
+        i = random.randint(0, trainenc.input_ids.shape[1] - seqlen - 1)
+        j = i + seqlen
+        inp = trainenc.input_ids[:, i:j]
+        tar = inp.clone()
+        tar[:, :-1] = -100
+        trainloader.append((inp, tar))
+
+    valenc = tokenizer(' '.join(valdata[:1100]['text']), return_tensors='pt')
+    valenc = valenc.input_ids[:, :(256 * seqlen)]
+    valenc = TokenizerWrapper(valenc)
+    return trainloader, valenc
+
+def get_c4(nsamples, seed, seqlen, tokenizer):
+    # Load train and validation datasets
+    traindata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_train')
+    valdata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_validation')
+
+    trainenc = tokenizer(' '.join(traindata['text']), return_tensors='pt')
+    # Generate samples from training set
+    random.seed(seed)
+    trainloader = []
+    for _ in range(nsamples):
+        '''
+        while True:
+            i = random.randint(0, len(traindata) - 1)
+            trainenc = tokenizer(traindata[i]['text'], return_tensors='pt')
+            if trainenc.input_ids.shape[1] > seqlen:
+                break
+        '''
+        i = random.randint(0, trainenc.input_ids.shape[1] - seqlen - 1)
+        j = i + seqlen
+        inp = trainenc.input_ids[:, i:j]
+        tar = inp.clone()
+        tar[:, :-1] = -100
+        trainloader.append((inp, tar))
+
+    # Prepare validation dataset
+    valenc = tokenizer(' '.join(valdata[:1100]['text']), return_tensors='pt')
+    valenc = valenc.input_ids[:, :(256 * seqlen)]
+    valenc = TokenizerWrapper(valenc)
+    return trainloader, valenc
+
+
+def get_slimpajama(nsamples, seed, seqlen, tokenizer):
+    # Load train and validation datasets
+
+    url='/ossfs/workspace/yixin.jyx/scale_lowrank/slimpajama/train/'
+    file_pattern = 'chunk2_{i}.jsonl.zst'
+    file_list = [url + file_pattern.format(i=i) for i in range(18)]   #(0,6)
+
+    traindata = load_dataset("json", data_files={'train':file_list})['train']
+    valdata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_validation')
+
+    # Generate samples from training set
+    random.seed(seed)
+    trainloader = []
+    for _ in range(nsamples):
+        while True:
+            i = random.randint(0, len(traindata) - 1)
+            trainenc = tokenizer(traindata[i]['text'], return_tensors='pt')
+            if trainenc.input_ids.shape[1] > seqlen:
+                break
+        i = random.randint(0, trainenc.input_ids.shape[1] - seqlen - 1)
+        j = i + seqlen
+        inp = trainenc.input_ids[:, i:j]
+        tar = inp.clone()
+        tar[:, :-1] = -100
+        trainloader.append((inp, tar))
+
+    # Prepare validation dataset
+    valenc = tokenizer(' '.join(valdata[:1100]['text']), return_tensors='pt')
+    valenc = valenc.input_ids[:, :(256 * seqlen)]
+    valenc = TokenizerWrapper(valenc)
+    return trainloader, valenc
+
+def get_wikipedia(nsamples, seed, seqlen, tokenizer):
+    # Load train and validation datasets
+
+    traindata = load_dataset("parquet", data_files='/ossfs/workspace/datacube-nas/yixin_llm/data/wikipedia/train-00000-of-00041.parquet')['train']
+    valdata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_validation')
+
+    trainenc = tokenizer(' '.join(traindata['text']), return_tensors='pt')
+    # Generate samples from training set
+    random.seed(seed)
+    trainloader = []
+    for _ in range(nsamples):
+        '''
+        while True:
+            i = random.randint(0, len(traindata) - 1)
+            trainenc = tokenizer(traindata[i]['text'], return_tensors='pt')
+            if trainenc.input_ids.shape[1] > seqlen:
+                break
+        '''
+        i = random.randint(0, trainenc.input_ids.shape[1] - seqlen - 1)
+        j = i + seqlen
+        inp = trainenc.input_ids[:, i:j]
+        tar = inp.clone()
+        tar[:, :-1] = -100
+        trainloader.append((inp, tar))
+
+    # Prepare validation dataset
+    valenc = tokenizer(' '.join(valdata[:1100]['text']), return_tensors='pt')
+    valenc = valenc.input_ids[:, :(256 * seqlen)]
+    valenc = TokenizerWrapper(valenc)
+    return trainloader, valenc
+
+def get_regenc4(nsamples, seed, seqlen, tokenizer):
+    # Load train and validation datasets
+    traindata = load_dataset('json',data_files='/ossfs/workspace/yixin.jyx/data/dclm_train_llama3_8b_256_reppenalty.json')['train']
+    valdata = load_from_disk('/ossfs/workspace/datacube-nas/yixin_llm/data/c4_validation')
+    
+    trainenc = tokenizer(' '.join(traindata['text']), return_tensors='pt')
+
+    # Generate samples from training set
+    random.seed(seed)
+    trainloader = []
+    for _ in range(nsamples):
+        '''
+        while True:
+            i = random.randint(0, len(traindata) - 1)
+            trainenc = tokenizer(traindata[i]['text'], return_tensors='pt')
+            if trainenc.input_ids.shape[1] > seqlen:
+                break
+        '''
+        i = random.randint(0, trainenc.input_ids.shape[1] - seqlen - 1)
+        j = i + seqlen
+        inp = trainenc.input_ids[:, i:j]
+        tar = inp.clone()
+        tar[:, :-1] = -100
+        trainloader.append((inp, tar))
+
+    # Prepare validation dataset
+    valenc = tokenizer(' '.join(valdata[:1100]['text']), return_tensors='pt')
+    valenc = valenc.input_ids[:, :(256 * seqlen)]
+    valenc = TokenizerWrapper(valenc)
+    return trainloader, valenc
+
 # Function to select the appropriate loader based on dataset name
 def get_loaders(name, nsamples=128, seed=0, seqlen=2048, tokenizer=None):
     if 'wikitext2' in name:
         return get_wikitext2(nsamples, seed, seqlen, tokenizer)
+    if "dclm" in name:
+        return get_dclm(nsamples, seed, seqlen, tokenizer)
+    if "c4" in name:
+        return get_c4(nsamples, seed, seqlen, tokenizer)
+    if "slimpajama" in name:
+        return get_slimpajama(nsamples, seed, seqlen, tokenizer)
+    if 'wikipedia' in name:
+        return get_wikipedia(nsamples, seed, seqlen, tokenizer)
+    if 'regen' in name:
+        return get_regenc4(nsamples, seed, seqlen, tokenizer)
 
 
 def get_llm(model, cache_dir='llm_weights'):
@@ -80,8 +247,8 @@ def get_llm(model, cache_dir='llm_weights'):
         model,
         torch_dtype=torch.float16,
         cache_dir=cache_dir,
-        low_cpu_mem_usage=True,)
-        #device_map='auto')
+        low_cpu_mem_usage=True,
+        device_map='auto')
     print('printing gpu allocation for all the layers')
     print(model.hf_device_map)
     model.seqlen = 2048
@@ -207,6 +374,8 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str, help='model to used')
     parser.add_argument(
         '--task', type=str, default='gradient', help='task to be performed')
+    parser.add_argument(
+        '--data', type=str, default='wikitext', help='calibration data')
     parser.add_argument('--seed', type=int, default=0, help='seed used')
     args = parser.parse_args()
     print(
@@ -235,7 +404,7 @@ if __name__ == '__main__':
     nsamples = args.nsamples
     seed = args.seed
     dataloader, _ = get_loaders(
-        'wikitext2',
+        args.data,
         nsamples=nsamples,
         seed=seed,
         seqlen=2048,
@@ -287,10 +456,10 @@ if __name__ == '__main__':
             with open(f'./gradients/opt/gradients_aggregate_norm_l2_{model_name}.path', 'wb') as f:
                 torch.save(computer.gradients_l2, f)
         else:
-            if not os.path.exists(f'./gradients/llama{args.llama_version}'):
-                os.makedirs(f'./gradients/llama{args.llama_version}')
+            if not os.path.exists(f'/ossfs/workspace/datacube-nas/yixin_llm/gradients/llama{args.llama_version}'):
+                os.makedirs(f'/ossfs/workspace/datacube-nas/yixin_llm/gradients/llama{args.llama_version}')
             with open(
-                    f'./gradients/llama{args.llama_version}/gradients_aggregrate_norm_l2_model_{model_name}_{args.nsamples}_{args.seed}.pth',
+                    f'/ossfs/workspace/datacube-nas/yixin_llm/gradients/llama{args.llama_version}/gradients_aggregrate_norm_l2_model_{model_name}_{args.data}_{args.seed}.pth',
                     'wb') as f:
                 torch.save(computer.gradients_l2, f)
             '''
