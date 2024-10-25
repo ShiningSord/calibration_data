@@ -1,2 +1,0 @@
-method	actual_sparsity	ppl_test	num_samples
-pruner-zero	0.5000	8.8902	128
