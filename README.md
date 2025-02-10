@@ -18,8 +18,8 @@ bash run_dclm_wanda.sh
 
 ### Self-generating synthetic data
 ```
-bash run_generate.sh
-python sample_ppl
+bash run_gendata.sh
+python sample_ppl.py
 ```
 
 ### Evaluation
