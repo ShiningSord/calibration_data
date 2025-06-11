@@ -1,0 +1,44 @@
+name: calibration_data
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy=1.13.*
+  - pytorch=2.1.1
+  - pytorch-cuda=12.1
+  - pip
+  - pip:
+      - xformers>=0.0.22
+      - tiktoken
+      - wandb
+      - webdataset
+      - pandas==2.1.4
+      - fsspec
+      - tqdm
+      - jsonlines
+      - boto3
+      - Pillow
+      - zstandard
+      - pysimdjson
+      - cloudpathlib
+      - datasets
+      - multiprocess>=0.70.11
+      - dill
+      - huggingface_hub
+      - pre-commit
+      - ray[all]
+      - loguru
+      - transformers
+      - s3fs
+      - wikipedia
+      - ipython
+      - mosaicml
+      - accelerate
+      - deepspeed==0.12.3
+      - evaluate==0.4.0
+      - gpustat==1.1.1
+      - scipy
+      - lm-eval
