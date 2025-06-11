@@ -6,9 +6,12 @@ This repo contains the code for "Beware of Calibration Data for Pruning Large La
 
 ## Quick start
 ### Installation
+Create and activate the conda environment:
 ```
-pip install -r requirement.txt
+conda env create -f environment.yml
+conda activate calibration_data
 ```
+This environment installs PyTorch 2.1.1 for CUDA 12.1 and uses NumPy 1.13.x.
 
 ### Empirical study
 ```
